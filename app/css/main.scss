@@ -1,4 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-$linear-gradient: #e5094b, #e1372b;
-$main-red-color: #e5094b;
+$font-family-jost: "Jost", sans-serif;
+$font-family-jost: "DM Serif Display", serif;
+$black-color: #292F36;
+$brown-color: #CDA274;
+$gray-color: #4D5053;
+
+* {
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header {
+    color: $black-color;
+
+    .header__menu {
+        font-family: $font-family-jost;
+        
+
+        .menu__list {
+            
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+
+            .menu__item {
+
+                .menu__link--active + a {
+                    flex: 5;
+                }
+                
+                .menu__link {
+                    color: $black-color;
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
