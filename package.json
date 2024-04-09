@@ -1,5 +1,5 @@
 {
-  "name": "free-food-landing-page",
+  "name": "nike-website",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "scripts": {
@@ -20,3 +20,4 @@
   },
   "description": ""
 }
+
