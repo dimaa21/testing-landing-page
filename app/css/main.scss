@@ -19,7 +19,19 @@ $gray-color: #4D5053;
 .header {
     display: flex;
     justify-content: space-between; 
-    align-items: center; 
+    align-items: center;
+    font-family: $font-family-jost;
+    margin: 20px 150px;
+
+    .header__logo i.fa-solid.fa-house {
+        position: relative;
+        top: -2px; 
+        color: #a99d42; 
+    }
+
+    .header__logo > a {
+        font-size: 25px;
+    }
   
     .menu__list {
       display: flex;
@@ -27,8 +39,20 @@ $gray-color: #4D5053;
       color: $black-color;
 
       .menu__item {
+        margin-right: 50px;
+
         &:not(:first-child) {
           margin-left: 20px;
+            }
+
+            .menu__link {
+                font-family: Jost;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                letter-spacing: 0.4000000059604645px;
+                text-align: left;
+
             }
         }
     }
