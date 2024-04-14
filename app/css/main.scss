@@ -7,4 +7,17 @@ $black-color: #292F36;
 $brown-color: #CDA274;
 $gray-color: #4D5053;
 
+* {
+    background-color: #0B1D26;
+}
+
+header {
+    background-image: url(/public/img/background-header.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    width: 100%;
+
+}
 
