@@ -1,4 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+$pink-color: #FF0043;
+$blue-color: #00194A;
+$white-color: #FFFFFF;
 
+
+* {
+    outline: none;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+// Шапка 
+
+ header {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center; 
+        justify-content: space-between;
+
+        .header__menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 25px 125px;
+
+            .main__page {
+                font-weight: 700;
+                color: $pink-color;
+                font-size: 20px;
+                font-family: Roboto;
+                line-height: 23.44px;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $blue-color;
+                }
+            }
+
+            .main__button {
+                color: $white-color;
+                border: #FFFFFF;
+                border-radius: 25px;
+                padding: 15px;
+                background-color: $pink-color;
+                cursor: pointer;
+                transition: background-position 0.5s, transform 0.5s;
+
+                &:hover {
+                    transform: translateY(-5px);    
+                }
+            }
+        }
+
+        .header__description {
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 125px 0 125px;
+
+            @media screen and (max-width: 1200px) {
+                    display: flex;
+                    flex-direction: column;
+            }
+
+
+            .text__desc {
+                .main__desc {
+                    font-weight: 500;
+                    font-size: 60px;
+                }
+
+                .full__desc {
+                    font-weight: 300;
+                    font-size: 18px;
+                }
+
+                .button__desc {
+                    margin: 20px 0;
+                    background-color: $pink-color;
+                    color: $white-color;
+                    padding: 20px 50px;
+                    border: $white-color;
+                    border-radius: 25px;
+                    transition: background-position 0.3s, transform 0.3s;
+
+                    &:hover {
+                        background-position: right center;
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+
+            .image__desc {
+                .header__image {
+                    
+                }
+            }
+        }
+    }
+ }
 
