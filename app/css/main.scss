@@ -15,96 +15,125 @@ body {
 
 // Шапка 
 
- header {
-    .header {
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center; 
+.header {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+
+    .header__menu {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin: 25px 125px;
 
-        .header__menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 25px 125px;
+        .main__page {
+            font-weight: 700;
+            color: $pink-color;
+            font-size: 20px;
+            font-family: Roboto;
+            line-height: 23.44px;
+            text-decoration: none;
+            transition: color 0.3s ease;
 
-            .main__page {
-                font-weight: 700;
-                color: $pink-color;
-                font-size: 20px;
-                font-family: Roboto;
-                line-height: 23.44px;
-                text-decoration: none;
-                transition: color 0.3s ease;
+            &:hover {
+                color: $blue-color;
+            }
+        }
 
-                &:hover {
-                    color: $blue-color;
-                }
+        .main__button {
+            color: $white-color;
+            border: #FFFFFF;
+            border-radius: 25px;
+            padding: 15px;
+            background-color: $pink-color;
+            cursor: pointer;
+            transition: background-position 0.5s, transform 0.5s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    .header__description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 125px;
+
+        .text__desc {
+            .main__desc {
+                font-weight: 500;
+                font-size: 60px;
             }
 
-            .main__button {
-                color: $white-color;
-                border: #FFFFFF;
-                border-radius: 25px;
-                padding: 15px;
+            .full__desc {
+                font-weight: 300;
+                font-size: 18px;
+            }
+
+            .button__desc {
+                margin: 20px 0;
                 background-color: $pink-color;
-                cursor: pointer;
-                transition: background-position 0.5s, transform 0.5s;
+                color: $white-color;
+                padding: 20px 50px;
+                border: $white-color;
+                border-radius: 25px;
+                transition: background-position 0.3s, transform 0.3s;
 
                 &:hover {
-                    transform: translateY(-5px);    
+                    background-position: right center;
+                    transform: translateY(-5px);
                 }
             }
         }
 
-        .header__description {
-            grid-template-columns: repeat(2, 1fr);
-            display: grid;
-            justify-content: space-between;
-            align-items: center;
-            margin: 20px 125px 0 125px;
+        .image__desc {
+            .header__image {
 
-            @media screen and (max-width: 1200px) {
-                    display: flex;
-                    flex-direction: column;
             }
+        }
+    }
 
+    @media screen and (max-width: 1200px) {
+        .header {
+            grid-template-columns: 1fr;
+        }
+        .header__description {
+            grid-template-columns: 1fr;
+            margin: 20px 0;
 
             .text__desc {
+                text-align: center;
                 .main__desc {
-                    font-weight: 500;
-                    font-size: 60px;
+                    font-size: 40px;
                 }
 
                 .full__desc {
-                    font-weight: 300;
-                    font-size: 18px;
-                }
-
-                .button__desc {
-                    margin: 20px 0;
-                    background-color: $pink-color;
-                    color: $white-color;
-                    padding: 20px 50px;
-                    border: $white-color;
-                    border-radius: 25px;
-                    transition: background-position 0.3s, transform 0.3s;
-
-                    &:hover {
-                        background-position: right center;
-                        transform: translateY(-5px);
-                    }
+                    font-size: 16px;
                 }
             }
 
             .image__desc {
-                .header__image {
-                    
-                }
+                text-align: center;
             }
         }
     }
- }
+
+    @media screen and (max-width: 768px) {
+        .header__menu {
+            flex-direction: column;
+            margin: 15px 0;
+
+            .main__button {
+                margin-top: 15px;
+            }
+        }
+    }
+}
 
  // Головний контент 
 
