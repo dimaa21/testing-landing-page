@@ -208,7 +208,8 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
         gap: 150px;
 
-        .advantages__block { 
+        .advantages__block {
+            
             @media screen and (max-width: 1550px) {
                 display: flex;
                 justify-content: center;
@@ -240,8 +241,9 @@ body {
         }
     }
 
+    // Блок - Переваги 2
+
     .benefits {
-        // Блок - Переваги 2
 
         .benefits__block {
             color: $blue-color;
@@ -250,7 +252,7 @@ body {
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             justify-content: space-between;
             gap: 150px;
-
+            
             .benefits__headline {
                 margin: 100px 75px 0 0;
 
@@ -278,9 +280,10 @@ body {
                     padding: 20px;
                     border-radius: 30px;    
                     display: grid;
+                    transition: transform 0.3s ease;
 
-                    &:nth-child(2n) {
-
+                    &:hover {
+                        transform: translateY(-10px);
                     }
 
                     .benefits__list__block__main__text {
@@ -298,5 +301,91 @@ body {
             }
         }
     }
+
+    // Блок - Переваги 3
+    .advancements {
+        margin: 100px 200px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        gap: 100px;
+
+        .advancements__desc {
+            margin-top: 100px;
+
+            .advancements__maint_text {
+                margin-top: 100px;
+                color: $blue-color;
+                font-size: 35px;
+                font-weight: 500;
+                line-height: 50px;
+
+                @media screen and (max-width: 1550px) {
+                    margin-top: 100px;
+                }
+            }
+
+            .advancements__main_desc,
+            .advancements__add_desc {
+                color: $blue-color;
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 28px;
+            }
+        }
+    }
 }
+
+// Секція - Перехід в додаток
+
+section {
+    .quick-app {
+        color: $white-color;
+        margin: 20px 200px;
+        background-color: $blue-color;
+        border-radius: 20px;
+
+        .quick-app__block {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+
+            @media screen and (max-width: 999px) {
+                justify-content: center;
+            }
+
+            .quick-app__block__title {
+                font-size: 35px;
+                font-weight: 500;
+                line-height: 50px;
+            }
+
+            .quick-app__block__desc {
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 28px;
+                margin: 0 0 50px 0;
+            }
+
+            .quick-app__block__button {
+                color: $white-color;
+                background-color: $pink-color;
+                padding: 20px 50px;
+                border: 0;
+                border-radius: 30px;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20.11px;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+}
+
 
