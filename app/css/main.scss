@@ -315,12 +315,22 @@ body {
         margin: 100px 225px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-        gap: 50px;
+        gap: 150px;
+
+        @media screen and (max-width: 1525px) {
+            gap: 20px;
+        }
 
         .advancements__block {
             @media screen and (max-width: 1700px) {
                 display: flex;
                 justify-content: center;
+            }
+        }
+
+        .advancements__img {
+            @media screen and (max-width: 1525px) {
+                margin: 0 100px 0 0;
             }
         }
 
@@ -366,7 +376,6 @@ section {
         background-color: $blue-color;
         border-radius: 20px;
 
-
         .quick-app__block {
             padding: 20px;
             text-align: center;
@@ -406,31 +415,47 @@ section {
 // Футер
 
 footer {
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-        align-items: center;
-        justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
 
+    @media screen and (max-width: 1350px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(900px, 1fr)); 
+    }
+
+    .footer {
+        margin: 20px 225px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(900px, 1fr)); 
+        justify-content: center;
+
+        
         .footer__item {
             color: $blue-color;
             font-size: 18px;
             font-weight: 500;
             line-height: 21.09px;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-auto-rows: auto;
-            margin: 25px 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            @media screen and (max-width: 1100px) {
-                grid-template-columns: repeat(auto-fill, minmax(899px, 1fr));
-                margin: 25px 0; /* Оновлено */
-                justify-items: center; /* Додано */
-                align-items: center; /* Додано */
+            @media screen and (max-width: 1350px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @media screen and (max-width: 930px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 200px;
             }
 
             .footer__item__right {
-                span {
+                display: flex;
+                
+                p {
                     padding: 0 20px;
                 }
             }
