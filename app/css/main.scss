@@ -138,7 +138,7 @@ body {
     .app {
         margin: 20px 200px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
         gap: 50px;
 
         .app__block {
@@ -205,7 +205,7 @@ body {
     .advantages {
         margin: 100px 225px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
         gap: 150px;
 
         .advantages__block {
@@ -252,12 +252,13 @@ body {
     // Блок - Переваги 2
 
     .benefits {
+        display: grid;
 
         .benefits__block {
             color: $blue-color;
             margin: 100px 225px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             justify-content: space-between;
             gap: 150px;
             
@@ -279,7 +280,7 @@ body {
             }
 
             .benefits__list {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
                 display: grid;
                 gap: 30px;
 
@@ -417,9 +418,8 @@ section {
 footer {
     display: grid;
     grid-template-columns: 1fr;
-
+    
     @media screen and (max-width: 1350px) {
-        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(900px, 1fr)); 
     }
 
@@ -428,7 +428,6 @@ footer {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(900px, 1fr)); 
         justify-content: center;
-
         
         .footer__item {
             color: $blue-color;
