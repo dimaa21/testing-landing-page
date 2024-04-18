@@ -138,7 +138,7 @@ body {
     .app {
         margin: 20px 200px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         gap: 50px;
 
         .app__block {
@@ -203,22 +203,28 @@ body {
     // Блок - Переваги 
 
     .advantages {
-        margin: 100px 225px;
+        margin: 100px 250px 0 250px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         gap: 150px;
+
+        @media screen and (max-width: 1099px) {
+            margin: 100px 200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        }
 
         .advantages__block {
             
-            @media screen and (max-width: 1700px) {
+            @media screen and (max-width: 1300px) {
                 display: flex;
                 justify-content: center;
                 margin-top: 150px;
             }
 
             .advantages__image {
-                @media screen and (max-width: 1550px) {
-                    margin-top: 50px;
+                @media screen and (max-width: 999px) {
+                    margin-top: -150px;
                 }
             }
         }
@@ -256,11 +262,15 @@ body {
 
         .benefits__block {
             color: $blue-color;
-            margin: 100px 225px;
+            margin: 100px 200px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             justify-content: space-between;
             gap: 150px;
+
+            @media screen and (max-width: 999px) {
+                margin-top: -100px;
+            }
             
             .benefits__headline {
                 margin: 100px 75px 0 0;
@@ -280,7 +290,7 @@ body {
             }
 
             .benefits__list {
-                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 display: grid;
                 gap: 30px;
 
@@ -313,9 +323,9 @@ body {
 
     // Блок - Переваги 3
     .advancements {
-        margin: 100px 225px;
+        margin: 0 225px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         gap: 150px;
 
         @media screen and (max-width: 1525px) {
@@ -426,7 +436,7 @@ footer {
     .footer {
         margin: 20px 225px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(900px, 1fr)); 
+        grid-template-columns: 1fr;
         justify-content: center;
         
         .footer__item {
