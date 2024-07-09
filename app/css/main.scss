@@ -28,13 +28,12 @@ header {
 }
 
 .header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
     .info {
-        display: grid;
-        grid-template-columns: auto auto 1fr;
+        display: flex;
+        margin: 0 40px;
         align-items: center;
 
         .menu i {
