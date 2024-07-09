@@ -7,12 +7,6 @@ $orange: #DCAC6C;
 $black: #000000;
 $violet: #322941;
 
-.flex {
-    display: flex;
-    justify-content: space-between; // розкидати об'єкти по різних сторонах
-}
-
-
 // Стилі для основної частини 
 
 body {
@@ -34,12 +28,15 @@ header {
 }
 
 .header {
-    @extend .flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
 
     .info {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        align-items: center;
 
-        
         .menu i {
             color: $white;
             margin-right: 20px;
@@ -106,18 +103,39 @@ header {
 
 .main {
     .introduce {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        margin-top: 40px; /* Adjust margin as needed */
 
         .vertical {
-            margin-top: 200px;
-            color: white; /* Колір тексту */
-            font-size: 24px; /* Розмір тексту */
+            color: white;
+            font-size: 24px;
             writing-mode: vertical-rl;
             text-orientation: mixed;
             transform: rotate(180deg);
             font-size: 120px;
             font-weight: 500;
             line-height: 120px;
+            margin-top: 200px; /* Move margin here if needed */
+        }
+
+        .fox-photo {
+            display: flex;
+            margin-top: 20px; /* Adjust margin as needed */
+
+            img {
+                max-width: 100%; /* Ensure image scales down */
+                height: auto; /* Maintain aspect ratio */
+                display: block; /* Remove extra space */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vertical {
+                font-size: 50px;
+                margin-top: 50px; /* Adjust margin for smaller screens */
+            }
         }
     }
 }
