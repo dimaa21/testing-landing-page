@@ -1,0 +1,49 @@
+@import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2');
+
+// Основні стилі
+
+* {
+    font-family: 'Trebuchet MS', sans-serif; 
+    font-weight: 400;           
+}
+
+$white-color: #FFFFFF;
+$black-color: #303030;
+
+// Стилі для шапки
+
+.flex {
+    display: flex;
+    justify-content: space-between; // розкидати об'єкти по різних сторонах
+}
+
+.header { 
+    @extend .flex;
+    margin-top: 30px;
+
+    .none { 
+        opacity: 0;
+    }
+
+    .btn-login { 
+        background: linear-gradient(90deg, #579AFF 11.17%, #574DCC 96.28%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 18px;
+        color: $linear;
+        line-height: 20.9px;
+        padding: 20px 40px;
+        border: $white-color;
+    }
+}
+
+.main { 
+    .info {
+        .main-text {
+            color: $black-color;
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 65.02px;
+        }
+    }
+}
