@@ -1,14 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2');
 
 // Основні стилі
+  
+$white-color: #ffffff;
+$black-color: #303030;
 
 * {
     font-family: 'Trebuchet MS', sans-serif; 
-    font-weight: 400;           
+    font-weight: 400; 
+    background-color: #F6F7FA!important;     
 }
-
-$white-color: #FFFFFF;
-$black-color: #303030;
 
 // Стилі для шапки
 
@@ -19,31 +20,90 @@ $black-color: #303030;
 
 .header { 
     @extend .flex;
-    margin-top: 30px;
+    margin-top: 31px; 
 
     .none { 
         opacity: 0;
     }
 
     .btn-login { 
-        background: linear-gradient(90deg, #579AFF 11.17%, #574DCC 96.28%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: linear-gradient(90deg, #579AFF 11.17%, #574DCC 96.28%);
         font-size: 18px;
-        color: $linear;
         line-height: 20.9px;
         padding: 20px 40px;
         border: $white-color;
+        background-color: $white-color!important;
+        border-radius: 10px;
     }
 }
 
 .main { 
-    .info {
+    @extend .flex;
+    margin-top: 30px;
+
+    .info { 
+        margin: 30px 50px;
+
         .main-text {
             color: $black-color;
-            font-size: 55px;
+            font-size: 50px;
             font-weight: 700;
-            line-height: 65.02px;
+            line-height: 65px;
+        }
+
+        .second-text {
+            font-size: 24px;   
+        }
+    }
+
+    .form-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+        
+        .google-btn, .signup-btn {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+        }
+        
+        .or-divider {
+            margin: 10px 0;
+            color: #888;
+        }
+        
+        .input-field {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .terms {
+            font-size: 12px;
+            color: #888;
+            margin-top: 20px;
         }
     }
 }
+
