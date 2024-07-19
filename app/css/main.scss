@@ -247,16 +247,16 @@ $black-color: #303030;
   padding: 40px 20px;
   border-radius: 12px;
   display: grid;
-  width: 100%;
-  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+  grid-template-columns: 400px, (1fr);
   grid-template-rows: auto;
-  justify-items: center!important;
-  gap: 40px; 
-  align-content: center!important;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
 
   .main-text {
       font-size: 1.8em;
-      margin-bottom: 40px;
+      margin-bottom: 41px;
   }
 
 
@@ -310,3 +310,4 @@ $black-color: #303030;
       }
   }
 }
+
