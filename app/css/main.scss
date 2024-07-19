@@ -120,6 +120,7 @@ $black-color: #303030;
 
 
 .slider {
+  margin: 100px 0;
   display: flex;
   width: 25%; /* Встановлюємо ширину слайдера для всіх слайдів */
   cursor: grab;
@@ -237,17 +238,16 @@ $black-color: #303030;
 }
 
 .features {
-  text-align: center!important;
   background: $white-color;
   padding: 40px 20px;
   border-radius: 12px;
   display: grid;
-  max-width: 100%;
   grid-template-columns: 400px, (1fr);
-  grid-template-rows: auto;
-  justify-content: center;
-  text-align: center;
+  grid-template-rows: 400px, (1fr);
+  justify-content: center!important;
+  text-align: center!important;
   gap: 40px;
+  align-content: center!important;
 
   .main-text {
       font-size: 1.8em;
