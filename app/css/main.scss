@@ -230,3 +230,20 @@ $black-color: #303030;
   }
 }
 
+// Block Join 
+
+.features {
+  display: flex; /* Встановлюємо flex-контейнер */
+  justify-content: center; /* Центруємо горизонтально */
+  align-items: center; /* Центруємо вертикально */
+  height: 30vh; /* Встановлюємо висоту на всю висоту екрану (опціонально) */
+  text-align: center; /* Вирівнювання тексту всередині блоку */
+
+  .join-block {
+
+    .main-text {
+      font-size: 56px;
+
+    }
+  }
+}
