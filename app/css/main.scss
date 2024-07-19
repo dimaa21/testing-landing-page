@@ -247,10 +247,14 @@ $black-color: #303030;
   padding: 40px 20px;
   border-radius: 12px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   justify-items: center!important;
   gap: 40px; 
+  align-content: center!important;
+  grid-template-areas:
+  ". a a ."
+  ". a a .";
   
 
   .main-text {
@@ -269,6 +273,7 @@ $black-color: #303030;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      
 
       .icon {
           background-color: $white-color!important;
