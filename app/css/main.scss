@@ -303,3 +303,51 @@ $black-color: #303030;
       }
   }
 }
+
+.find {
+  text-align: center;
+  margin: 100px 0;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+
+    .find-item {
+      background: $white-color!important;
+      padding: 20px 150px;
+      border-radius: 10px;
+      display: flex;
+      max-width: 700px;
+      border-radius: 20px;
+
+      img {
+        background: $white-color!important;
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+      }
+
+      p {
+        background: $white-color!important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    max-width: 100%;
+  }
+}
