@@ -137,7 +137,7 @@ $black-color: #303030;
 
 .slide {
   width: 100%; /* Кожен слайд займає всю ширину контейнера */
-  flex: 1 0 100%; /* Встановлюємо флекс-базу */
+  flex: 2 0 100%; /* Встановлюємо флекс-базу */
 }
 
 .slide img {
@@ -146,16 +146,3 @@ $black-color: #303030;
   border-radius: 50px;
 }
 
-.slide:first-child img {
-  height: 95%;
-  margin: 0 0 10px 0 ;
-  border-radius: 10px;
-}
-
-.slider {
-  .img-1 {
-  height: 400px;
-  margin: 20px 0 10px 0;
-  border-radius: 10px;
-  }
-}
