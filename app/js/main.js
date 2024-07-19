@@ -8,6 +8,7 @@ slider.addEventListener('mousedown', (e) => {
   slider.classList.add('active');
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
+  slider.style.transition = 'none'; // Вимкнути плавний перехід під час перетягування
 });
 
 slider.addEventListener('mouseleave', () => {
@@ -18,13 +19,14 @@ slider.addEventListener('mouseleave', () => {
 slider.addEventListener('mouseup', () => {
   isDown = false;
   slider.classList.remove('active');
+  slider.style.transition = 'transform 0.5s ease'; // Включити плавний перехід після відпускання
 });
 
 slider.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; // Adjust scroll speed
+  const walk = (x - startX) * 2; // Налаштування швидкості прокручування
   slider.scrollLeft = scrollLeft - walk;
 });
 
