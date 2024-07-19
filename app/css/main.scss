@@ -233,17 +233,67 @@ $black-color: #303030;
 // Block Join 
 
 .features {
-  display: flex; /* Встановлюємо flex-контейнер */
-  justify-content: center; /* Центруємо горизонтально */
-  align-items: center; /* Центруємо вертикально */
-  height: 30vh; /* Встановлюємо висоту на всю висоту екрану (опціонально) */
-  text-align: center; /* Вирівнювання тексту всередині блоку */
+  background: $white-color;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
 
-  .join-block {
+  .main-text {
+      font-size: 1.8em;
+      margin-bottom: 40px;
+  }
 
-    .main-text {
-      font-size: 56px;
 
-    }
+
+  .feature-item {
+      background-color: $white-color!important;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .icon {
+          background-color: $white-color!important;
+          font-size: 2em;
+      }
+
+      h3 {
+          background-color: $white-color!important;
+          font-size: 1.2em;
+          font-weight: bold;
+      }
+
+      p {
+          background-color: $white-color!important;
+          font-size: 0.9em;
+          color: $black-color;
+          font-size: 18px;
+      }
+  }
+
+  .feature-item:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .feature-item:nth-child(4) {
+      grid-row: 2;
+  }
+
+  @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+
+      .feature-item:nth-child(3),
+      .feature-item:nth-child(4) {
+          grid-column: auto;
+      }
   }
 }
