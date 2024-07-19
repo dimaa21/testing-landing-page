@@ -118,100 +118,58 @@ $black-color: #303030;
     }
 }
 
-.wrapper {
-    margin: 100px 0;
+.slider-wrapper {
     display: flex;
-    max-width: 120%;
+    align-items: center;
     position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
   
-    i {
-      top: 50%;
-      height: 44px;
-      width: 44px;
-      color: #343F4F;
+    .fa {
       cursor: pointer;
-      font-size: 1.15rem;
+      font-size: 2rem;
+      color: #333;
       position: absolute;
-      text-align: center;
-      line-height: 44px;
-      background: #fff;
-      border-radius: 50%;
+      top: 50%;
       transform: translateY(-50%);
-      transition: transform 0.1s linear;
-  
-      &:active {
-        transform: translateY(-50%) scale(0.9);
-      }
+      z-index: 2;
   
       &:hover {
-        background: #f2f2f2;
-      }
-  
-      &:first-child {
-        left: -22px;
-        display: none;
-      }
-  
-      &:last-child {
-        right: -22px;
+        color: #000;
       }
     }
   
-    .carousel {
-      font-size: 0px;
-      cursor: pointer;
-      overflow: hidden;
-      white-space: nowrap;
-      scroll-behavior: smooth;
-      display: flex; /* Added flex for alignment */
-  
-      &.dragging {
-        cursor: grab;
-        scroll-behavior: auto;
-  
-        img {
-          pointer-events: none;
-        }
-      }
-  
-      .slider-img {
-        height: 340px;
-        object-fit: cover;
-        user-select: none;
-        width: calc(100% / 3);
-        margin-left: 10px;
-  
-        &:first-child,
-        &:last-child {
-          width: calc(100% / 6); // Show half width
-        }
-  
-        &:first-child {
-          margin-left: 0px;
-        }
-      }
+    #left {
+      left: 10px;
     }
-  }
   
-  @media screen and (max-width: 900px) {
-    .carousel .slider-img {
-      width: calc(100% / 2);
-      
-      &:first-child,
-      &:last-child {
-        width: calc(100% / 4); // Show half width
-      }
+    #right {
+      right: 10px;
     }
-  }
   
-  @media screen and (max-width: 550px) {
-    .carousel .slider-img {
+    .slider-carousel {
+      display: flex;
+      transition: transform 0.5s ease;
       width: 100%;
-      
-      &:first-child,
-      &:last-child {
-        width: 50%; // Show half width
-      }
+    }
+  
+    .slider-img {
+      min-width: 100%;
+      user-select: none;
     }
   }
+  
+  @media (max-width: 900px) {
+    .slider-img {
+      min-width: 50%;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .slider-img {
+      min-width: 100%;
+    }
+  }
+  
   
