@@ -242,7 +242,7 @@ $black-color: #303030;
 }
 
 .features {
-  text-align: center;
+  text-align: center!important;
   background: $white-color;
   padding: 40px 20px;
   border-radius: 12px;
@@ -252,10 +252,6 @@ $black-color: #303030;
   justify-items: center!important;
   gap: 40px; 
   align-content: center!important;
-  grid-template-areas:
-  ". a a ."
-  ". a a .";
-  
 
   .main-text {
       font-size: 1.8em;
@@ -273,7 +269,6 @@ $black-color: #303030;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      
 
       .icon {
           background-color: $white-color!important;
