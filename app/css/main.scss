@@ -49,7 +49,7 @@ $black-color: #303030;
     margin-top: 30px;
 
     .info { 
-        margin: 50px 100px;
+        margin: 30px 70px;
 
         .main-text {
             margin-top: 75px;
@@ -118,64 +118,6 @@ $black-color: #303030;
     }
 }
 
-.slider-wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  
-    .fa {
-      cursor: pointer;
-      font-size: 2rem;
-      color: #333;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 2;
-  
-      &:hover {
-        color: #000;
-      }
-    }
-  
-    #left {
-      left: 10px;
-    }
-  
-    #right {
-      right: 10px;
-    }
-  
-    .slider-carousel {
-      display: flex;
-      transition: transform 0.5s ease;
-      width: 100%;
-    }
-  
-    .slider-img {
-      min-width: 100%;
-      user-select: none;
-    }
-  }
-  
-  @media (max-width: 900px) {
-    .slider-img {
-      min-width: 50%;
-    }
-  }
-  
-  @media (max-width: 550px) {
-    .slider-img {
-      min-width: 100%;
-    }
-  }
-  
-  margin: 100px 0;
-  width: 100%;
-  overflow: hidden;
-
 
 .slider {
   display: flex;
@@ -195,7 +137,7 @@ $black-color: #303030;
 
 .slide img {
   width: 100%;
-  height: 95%;
+  height: 96%;
   border-radius: 50px;
 }
 
@@ -285,7 +227,7 @@ $black-color: #303030;
 
 // Block Join 
 
-.main-text {
+.main-text-features {
   margin-top: 100px;
   font-size: 56px;
   display: flex;
@@ -295,20 +237,21 @@ $black-color: #303030;
 }
 
 .features {
-  text-align: center;
+  text-align: center!important;
   background: $white-color;
   padding: 40px 20px;
   border-radius: 12px;
-  width: 100%;
-  max-width: 100%;
   display: grid;
-  grid-template-columns: 700px, (1fr);
-  grid-template-rows: auto auto;
+  max-width: 100%;
+  grid-template-columns: 400px, (1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  text-align: center;
   gap: 40px;
 
   .main-text {
       font-size: 1.8em;
-      margin-bottom: 40px;
+      margin-bottom: 41px;
   }
 
 
