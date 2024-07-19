@@ -146,3 +146,87 @@ $black-color: #303030;
   border-radius: 50px;
 }
 
+// Блок About
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px; // Додатковий відступ для мобільних пристроїв
+
+  .main-about {
+    background-color: $white-color !important;
+    padding: 50px 20px; // Зменшені відступи для мобільних пристроїв
+    border-radius: 20px; // Зменшене округлення для мобільних пристроїв
+
+    .main-text, 
+    .second-text {
+      background-color: $white-color !important;
+    }
+
+    .main-text strong, 
+    .second-text strong {
+      background-color: $white-color !important;
+    }
+    
+    .main-text {
+      font-size: 36px; // Зменшений розмір шрифту для мобільних пристроїв
+    }
+
+    .second-text {
+      font-size: 18px; // Зменшений розмір шрифту для мобільних пристроїв
+    }
+
+    .btn-join {
+      margin: 20px 0;
+      background: linear-gradient(90deg, #574DCC, #579AFF);
+      padding: 15px 50px; // Зменшені відступи для мобільних пристроїв
+      border: 0;
+      border-radius: 8px; // Зменшене округлення для мобільних пристроїв
+      color: $white-color;
+      font-size: 18px; // Зменшений розмір шрифту для мобільних пристроїв
+    }
+  }
+
+  @media (min-width: 600px) {
+    .main-about {
+      padding: 60px 40px; // Відступи для планшетів
+      border-radius: 30px; // Округлення для планшетів
+
+      .main-text {
+        font-size: 48px; // Розмір шрифту для планшетів
+      }
+
+      .second-text {
+        font-size: 20px; // Розмір шрифту для планшетів
+      }
+
+      .btn-join {
+        padding: 15px 80px; // Відступи для планшетів
+        font-size: 20px; // Розмір шрифту для планшетів
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .main-about {
+      padding: 100px 200px; // Відступи для великих екранів
+      border-radius: 50px; // Округлення для великих екранів
+
+      .main-text {
+        font-size: 56px; // Розмір шрифту для великих екранів
+      }
+
+      .second-text {
+        font-size: 24px; // Розмір шрифту для великих екранів
+      }
+
+      .btn-join {
+        padding: 20px 100px; // Відступи для великих екранів
+        font-size: 24px; // Розмір шрифту для великих екранів
+      }
+    }
+  }
+}
+
