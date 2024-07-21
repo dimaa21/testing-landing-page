@@ -305,26 +305,64 @@ $black-color: #303030;
 }
 
 .find {
-    margin-top: 100px;
-    display: flex;
-    height: 90vh;
-    justify-content: center;
-    text-align: center;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; // додано для вертикального вирівнювання
+  text-align: center;
 
   .find-block {
-      padding: 40px;
-      font-size: 25px;
-      height: fit-content;
-      width: fit-content;
+    padding: 40px;
+    font-size: 25px;
+    height: fit-content;
+    width: fit-content;
 
     .main-text {
       font-size: 56px;
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+        margin-bottom: 50px;
+      }
     }
 
     .find-item {
-      background-color: $white-color!important;
+      background-color: $white-color !important;
       align-items: center;
-      margin: 30px 0;
+      padding: 40px 120px;
+      border-radius: 20px;
+      margin: 5px 0;
+      display: flex;
+      overflow-wrap: break-word;
+      justify-content: flex-start;
+
+      @media (max-width: 768px) {
+        margin: 20px 0;
+        display: flex;
+        padding: 20px 40px;
+        text-align: center!important;
+        align-items: center!important;
+        justify-content: center!important;
+        flex-wrap: wrap;
+      }
+
+      .item-icon {
+        background-color: $white-color !important;
+        min-width: 40px; // встановіть відповідну ширину для іконок
+        display: flex;
+        justify-content: center;
+      }
+
+      .item-text {
+        background-color: $white-color !important;
+        margin-left: 10px; // відступ між іконкою і текстом
+        text-align: left; // текст вирівняний по лівому краю
+
+        @media (max-width: 768px) {
+          text-align: center!important;
+          align-items: center!important;
+        }
+      }
     }
   }
 }
