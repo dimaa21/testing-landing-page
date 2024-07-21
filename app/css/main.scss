@@ -317,12 +317,14 @@ $black-color: #303030;
       height: fit-content;
       width: fit-content;
 
-      .main-text {
-        font-size: 56px;
-      }
+    .main-text {
+      font-size: 56px;
+    }
 
-      .find-item {
-        align-items: center;
-      }
+    .find-item {
+      background-color: $white-color!important;
+      align-items: center;
+      margin: 30px 0;
+    }
   }
 }
