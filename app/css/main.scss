@@ -305,52 +305,24 @@ $black-color: #303030;
 }
 
 .find {
-  text-align: center;
-  margin: 100px 0;
-
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  .flex-container {
+    margin-top: 100px;
     display: flex;
+    height: 90vh;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 25px;
+    text-align: center;
 
-    .find-item {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      width: 300px;
-      box-sizing: border-box;
+  .find-block {
+      padding: 40px;
+      font-size: 25px;
+      height: fit-content;
+      width: fit-content;
 
-      img {
-        background: $white-color!important;
-        width: 40px;
-        height: 40px;
-        margin-right: 15px;
+      .main-text {
+        font-size: 56px;
       }
 
-      p {
-        background: $white-color!important;
+      .find-item {
+        align-items: center;
       }
-    }
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .find-item {
-    max-width: 100%;
   }
 }
