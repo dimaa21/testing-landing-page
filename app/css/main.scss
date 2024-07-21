@@ -304,6 +304,8 @@ $black-color: #303030;
   }
 }
 
+// Блок Find
+
 .find {
   margin-top: 100px;
   display: flex;
@@ -329,7 +331,7 @@ $black-color: #303030;
     .find-item {
       background-color: $white-color !important;
       align-items: center;
-      padding: 40px 120px;
+      padding: 30px 120px;
       border-radius: 20px;
       margin: 5px 0;
       display: flex;
@@ -355,6 +357,7 @@ $black-color: #303030;
 
       .item-text {
         background-color: $white-color !important;
+        font-size: 24px;
         margin-left: 10px; // відступ між іконкою і текстом
         text-align: left; // текст вирівняний по лівому краю
 
@@ -362,6 +365,48 @@ $black-color: #303030;
           text-align: center!important;
           align-items: center!important;
         }
+      }
+    }
+  }
+}
+
+
+// Блок Universe
+.universe {
+  margin-top: 100px;
+
+  .universe-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .main-text {
+      font-weight: bold;
+      font-size: 56px;
+    }
+
+    .desc-text {
+      font-size: 24px;
+    }
+  }
+  
+  // Медіа-запит для екранів шириною менше 900px
+  @media (max-width: 500px) {
+    .universe-block {
+      text-align: left; // Вирівнювання тексту по лівому краю
+      padding: 0 20px; // Додайте відступи, якщо потрібно
+
+      .main-text, .desc-text {
+        text-align: left; // Вирівнювання тексту по лівому краю
+      }
+
+      .main-text {
+        font-size: 34px;
+      }
+
+      .desc-text {
+        font-size: 18px;
       }
     }
   }
