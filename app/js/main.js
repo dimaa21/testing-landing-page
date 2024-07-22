@@ -20,6 +20,8 @@ new Swiper('.image-slider', {
 
   autoHeight: true,
 
+  height: 300,
+
   slidesPerView: 4.5,
 
   spaceBetween: 10,
@@ -44,8 +46,8 @@ breakpoints: {
     320: {
         slidesPerView: 1,
     },
-    480: {
-        slidesPerView: 2,
+    320: {
+        slidesPerView: 1,
     },
     992: {
         slidesPerView: 3,
@@ -100,8 +102,8 @@ new Swiper('.image-slider-2', {
       320: {
           slidesPerView: 1,
       },
-      480: {
-          slidesPerView: 2,
+      320: {
+        slidesPerView: 1,
       },
       992: {
           slidesPerView: 3,
