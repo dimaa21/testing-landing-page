@@ -118,6 +118,7 @@ $black-color: #303030;
     }
 }
 
+// Slider 1
 
 .wrapper-2 {
   margin: 150px 0;
@@ -439,8 +440,8 @@ $black-color: #303030;
 // Swiper 2
 
 .wrapper {
-  margin: 100px 0;
-
+  margin: 100px 0 0 0;
+ 
   .block {
     display: flex;
 
@@ -456,6 +457,27 @@ $black-color: #303030;
         width: 100%;
         height: 700px;
         overflow: hidden; 
+
+        .btn-join {
+          display: flex;
+          justify-content: center;
+          align-self: center;
+          text-align: center;
+          margin: 20px 0;
+          background: linear-gradient(90deg, #574DCC, #579AFF);
+          padding: 15px 50px; // Зменшені відступи для мобільних пристроїв
+          border: 0;
+          border-radius: 8px; // Зменшене округлення для мобільних пристроїв
+          color: $white-color;
+          font-size: 18px; // Зменшений розмір шрифту для мобільних пристроїв
+
+          @media (min-width: 600px) {      
+            .btn-join {
+              padding: 15px 80px; // Відступи для планшетів
+              font-size: 20px; // Розмір шрифту для планшетів
+            }
+          }
+        }
 
         .image-slider__wrapper {
           display: flex;
