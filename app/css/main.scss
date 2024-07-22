@@ -513,13 +513,43 @@ $black-color: #303030;
   margin-top: 100px;
 
   .write-block {
-    .desc {
+    display: flex;
+    align-items: center; // Вирівнювання по центру вертикально
+    justify-content: space-between; // Простір між елементами
+
+
+    .desc { 
+
       .main-text {
         font-size: 56px;
+        font-weight: bold;
+      }
+
+      .desc-text { // Виправлено з .second-text на .desc-text
+        font-size: 21px; // Додано одиниці вимірювання px
+      }
+
+      .btn-write {
+        margin: 20px 0;
+        background: linear-gradient(90deg, #574DCC, #579AFF);
+        padding: 15px 50px; // Зменшені відступи для мобільних пристроїв
+        border: 0;
+        border-radius: 8px; // Зменшене округлення для мобільних пристроїв
+        color: $white-color;
+        font-size: 18px; // Зменшений розмір шрифту для мобільних пристроїв
+      }
+    }
+
+    .image {
+      img {
+        max-width: 100%; // Забезпечити адаптивність зображення
+        height: auto; // Зберігати пропорції зображення
       }
     }
   }
 }
+
+
 
 
 
