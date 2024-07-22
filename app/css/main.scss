@@ -121,7 +121,7 @@ $black-color: #303030;
 // Slider 1
 
 .wrapper-2 {
-  margin: 150px 0;
+  margin-top: 75px;
 
   .block {
     display: flex;
@@ -440,10 +440,11 @@ $black-color: #303030;
 // Swiper 2
 
 .wrapper {
-  margin: 100px 0 0 0;
- 
+
   .block {
     display: flex;
+    height: 100%;
+    height: auto !important;
 
     .block__side {
       flex: 0;
@@ -452,16 +453,41 @@ $black-color: #303030;
     .block__body {
       padding: 0px;
       min-width: 0;
+      height: 100% !important;
 
       .image-slider {
         width: 100%;
         height: 700px;
-        overflow: hidden; 
+        overflow: hidden;
+        display: flex; // Додаємо Flexbox для контейнера
+        flex-direction: column; // Встановлюємо напрямок Flexbox по вертикалі
+        justify-content: center; // Централізуємо по вертикалі
+        align-items: center; // Централізуємо по горизонталі
+
+        .swiper-wrapper {
+          display: flex;
+
+          .swiper-slide {
+            .image-slider__image {
+              img {
+                display: block;
+                width: 100%;
+                height: auto;
+              }
+            }
+
+            .one,
+            .last {
+              margin-top: 25px;
+              width: 87%;
+            }
+          }
+        }
 
         .btn-join {
           display: flex;
           justify-content: center;
-          align-self: center;
+          align-items: center;
           text-align: center;
           margin: 20px 0;
           background: linear-gradient(90deg, #574DCC, #579AFF);
@@ -471,33 +497,9 @@ $black-color: #303030;
           color: $white-color;
           font-size: 18px; // Зменшений розмір шрифту для мобільних пристроїв
 
-          @media (min-width: 600px) {      
-            .btn-join {
-              padding: 15px 80px; // Відступи для планшетів
-              font-size: 20px; // Розмір шрифту для планшетів
-            }
-          }
-        }
-
-        .image-slider__wrapper {
-          display: flex;
-
-          .image-slider__slide {
-
-            .image-slider__image {
-
-              img {
-                display: block;
-                width: 100%;
-                height: auto;
-              }
-            }
-
-            .one, 
-            .last {
-              margin-top: 25px;
-              width: 87%;
-            }
+          @media (min-width: 600px) {
+            padding: 15px 80px; // Відступи для планшетів
+            font-size: 20px; // Розмір шрифту для планшетів
           }
         }
       }
@@ -505,6 +507,19 @@ $black-color: #303030;
   }
 }
 
+// Блок Write
+
+.write {
+  margin-top: 100px;
+
+  .write-block {
+    .desc {
+      .main-text {
+        font-size: 56px;
+      }
+    }
+  }
+}
 
 
 
