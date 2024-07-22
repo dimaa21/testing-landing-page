@@ -119,28 +119,51 @@ $black-color: #303030;
 }
 
 
-.slider {
-  margin: 100px 0;
-  display: flex;
-  width: 25%; 
-  cursor: grab;
-  transition: transform 0.5s ease; 
+.wrapper-2 {
+  margin: 150px 0;
+
+  .block {
+    display: flex;
+
+    .block__side {
+      flex: 0;
+    }
+
+    .block__body {
+      padding: 0px;
+      min-width: 0;
+
+      .image-slider-2 {
+        width: 100%;
+        height: 600px;
+        overflow: hidden; 
+
+        .image-slider__wrapper {
+          display: flex;
+
+          .image-slider__slide {
+
+            .image-slider__image {
+
+              img {
+                display: block;
+                width: 100%;
+                height: auto;
+              }
+            }
+
+            .one, 
+            .last {
+
+              width: 97%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-.slider:active {
-  cursor: grabbing;
-}
-
-.slide {
-  width: 100%; 
-  flex: 2 0 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 95%;
-  border-radius: 50px;
-} 
 
 
 // Блок About
@@ -416,25 +439,50 @@ $black-color: #303030;
 // Swiper 2
 
 .wrapper {
+  margin: 100px 0;
+
   .block {
     display: flex;
 
     .block__side {
-      flex: 0 0 300px;
-      background-color: $white-color;
+      flex: 0;
     }
 
     .block__body {
-      padding: 0px 0px 0px 30px;
-      flex: 1 1 auto;
-
+      padding: 0px;
       min-width: 0;
 
       .image-slider {
-        padding: 30px;
+        width: 100%;
+        height: 700px;
+        overflow: hidden; 
+
+        .image-slider__wrapper {
+          display: flex;
+
+          .image-slider__slide {
+
+            .image-slider__image {
+
+              img {
+                display: block;
+                width: 100%;
+                height: auto;
+              }
+            }
+
+            .one, 
+            .last {
+              margin-top: 25px;
+              width: 87%;
+            }
+          }
+        }
       }
     }
   }
 }
+
+
 
 
