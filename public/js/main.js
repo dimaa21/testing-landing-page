@@ -113,18 +113,20 @@ new Swiper('.image-slider-2', {
   });
 
 
-document.getElementById('scroll-button').addEventListener('click', function() {
-    document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
-});
+  window.onload = function() {
+    document.getElementById('scroll-button').addEventListener('click', function() {
+      document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
+    });
 
-document.getElementById('scroll-button-2').addEventListener('click', function() {
-  document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
-});
+    document.getElementById('scroll-button-2').addEventListener('click', function() {
+      document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
+    });
 
-document.getElementById('scroll-button-3').addEventListener('click', function() {
-  document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
-});
+    document.getElementById('scroll-button-3').addEventListener('click', function() {
+      document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
+    });
 
-document.getElementById('scroll-button-4').addEventListener('click', function() {
-  document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
-});
+    document.getElementById('scroll-button-4').addEventListener('click', function() {
+      document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
