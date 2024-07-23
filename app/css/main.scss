@@ -1,3 +1,5 @@
+// Підключення основного шрифта
+
 @import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2');
 
 // Основні стилі
@@ -5,18 +7,22 @@
 $white-color: #ffffff;
 $black-color: #303030;
 
+//  Загальні стилі
+
 * {
     font-family: 'Trebuchet MS', sans-serif; 
     font-weight: 400; 
     background-color: #F6F7FA!important;     
 }
 
-// Стилі для шапки
+// FlexBox для наслідуванні
 
 .flex { 
     display: flex;
     justify-content: space-between;
 }
+
+// Grid сітка для наслідування 
 
 .grid {
     display: grid;
@@ -25,9 +31,13 @@ $black-color: #303030;
     margin-bottom: 10px;
 }
 
+// Для скролу при натисканні 
+
 html {
   scroll-behavior: smooth;
 }
+
+// Шапка 
 
 .header { 
     @extend .flex;
@@ -56,90 +66,229 @@ html {
     }
 }
 
-.main { 
-    @extend .flex;
-    margin-top: 30px;
+// Основний контент сторінки
 
-    @media (max-width: 992px) {
+.main {
+  @extend .flex;
+  margin-top: 30px;
+  position: relative; // Забезпечує правильне позиціонування
+
+  @media (max-width: 992px) {
       margin: 0 50px;
       flex-direction: column; // Вирівнюємо елементи вертикально на маленьких екранах
       align-items: center; // Вирівнюємо елементи по початку
-      text-align: center // Вирівнюємо текст по лівому краю
+      text-align: center; // Вирівнюємо текст по лівому краю
+  }
+
+  .info { 
+      margin: 30px 70px;
+
+      .main-text {
+          margin-top: 75px;
+          color: $black-color;
+          font-size: 50px;
+          font-weight: 700;
+          line-height: 65px;
+      }
+
+      .second-text {
+          font-size: 24px;   
+      }
+  }
+
+  .form-container {
+      position: relative; // Забезпечує правильне накладання для дочірніх елементів
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      text-align: center;
+      margin: 0 9px 0 0;
+      z-index: 1!important;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+      
+      .google-btn, .signup-btn {
+          background-color: #4285f4!important;
+          color: #ffffff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          margin: 10px 0;
+          cursor: pointer;
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          
+          img {
+              width: 30px;
+              height: 30px;
+              margin-right: 30px;
+              border: $white-color;
+              border-radius: 3px;
+          }
+      }
+      
+      .or-divider {
+          margin: 10px 0;
+          color: #888;
+      }
+      
+      .input-field {
+          width: calc(100% - 20px);
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 14px;
+      }
+      
+      .terms {
+          font-size: 12px;
+          color: #888;
+          margin-top: 20px;
+      }
     }
 
-    .info { 
-        margin: 30px 70px;
+    .gradient-background {
+      position: absolute;
+      top: 85%; // Коригування для центрованого позиціонування
+      left: 98%; // Коригування для центрованого позиціонування
+      width: 200px; // Ширина блоку з градієнтом
+      height: 200px; // Висота блоку з градієнтом
+      transform: translate(-50%, -50%); // Центрування градієнта
+      background: linear-gradient(180deg, #3494E6 0%, #8583CD 44%, #EC6EAD 100%);
+      border-radius: 50%;
+      filter: blur(60px); // Розмиття для ефекту
+      z-index: 0!important; // Задній план
 
-        .main-text {
-            margin-top: 75px;
-            color: $black-color;
-            font-size: 50px;
-            font-weight: 700;
-            line-height: 65px;
-        }
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
 
-        .second-text {
-            font-size: 24px;   
-        }
+  .new-form {
+    @media (min-width: 992px) {
+      display: none;
     }
 
-    .form-container {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 500px;
+    .registration-form {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff!important;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+      margin: 0 9px 0 0;
+  
+      .form-group {
+        margin-bottom: 15px;
+        background-color: #fff!important;
+
+        .label {
+          background-color: #fff!important;
+          display: flex;
+        }
+      }
+  
+      label {
+        color: $black-color;
+        background-color: #fff!important;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .label-2 {
+        display: flex;
         text-align: center;
-        margin: 0 10px 0 0;
+        justify-content: center;
+        color: #8789A1;
+        background-color: #F5F7F9!important;
+      }
+  
+      input[type="text"] {
+        background-color: #F5F7F9;
+        color: #8789A1;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+  
+      .radio-group {
+        background-color: #fff!important;
+        display: flex;
+        justify-content: space-between;
+  
+        input[type="radio"] {
+          background-color: #F5F7F9;
+          display: none;
+        }
+  
+        label {
+          color: #8789A1;
+          background-color: #fff!important;
+          width: 48%;
+          padding: 10px;
+          text-align: left;
+          border: 1px solid #d1d5db;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 14px;
 
-        @media (max-width: 992px) {
-            width: 400px;
+          .label-2 {
+            background-color: #F5F7F9!important;
+          }
         }
-        
-        .google-btn, .signup-btn {
-            background-color: #4285f4!important;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 10px 0;
-            cursor: pointer;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            
-            img {
-                width: 30px;
-                height: 30px;
-                margin-right: 30px;
-                border: $white-color;
-                border-radius: 3px;
-            }
+  
+        input[type="radio"]:checked + label {
+          background-color: #e5e7eb;
         }
-        
-        .or-divider {
-            margin: 10px 0;
-            color: #888;
+
+        .label-2 {
+          color: #8789A1;
+          background-color: #F5F7F9!important;
         }
-        
-        .input-field {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
+      }
+  
+      .checkbox-group {
+        display: flex;
+        text-align: left;
+  
+        input[type="checkbox"] {
+          margin-right: 10px;
         }
-        
-        .terms {
-            font-size: 12px;
-            color: #888;
-            margin-top: 20px;
-        }
+      }
+  
+      .submit-button {
+        background: linear-gradient(90deg, #574DCC, #579AFF);
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 10px 0;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+  
+      .submit-button:hover {
+        background-color: #4338ca;
+      }
     }
-}
+  }
 
 // Slider 1
 
@@ -198,17 +347,37 @@ html {
 // Блок About
 
 .about {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px; // Додатковий відступ для мобільних пристроїв
+  position: relative; // Забезпечує правильне позиціонування для дочірніх елементів
 
   @media (max-width: 992px) {
     margin-top: -200px;
   }
 
+  .gradient-background {
+    position: absolute;
+    top: 5%; // Коригування для центрованого позиціонування
+    left: 88%; // Коригування для центрованого позиціонування
+    width: 200px; // Ширина блоку з градієнтом
+    height: 200px; // Висота блоку з градієнтом
+    transform: translate(-50%, -50%); // Центрування градієнта
+    background: linear-gradient(180deg, #3494E6 0%, #8583CD 44%, #EC6EAD 100%);
+    border-radius: 50%;
+    filter: blur(60px); // Розмиття для ефекту
+    z-index: 0!important; // Задній план
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
   .main-about {
+    position: relative; // Забезпечує правильне накладання для дочірніх елементів
     background-color: $white-color !important;
     padding: 40px 20px; // Зменшені відступи для мобільних пристроїв
     border-radius: 20px; // Зменшене округлення для мобільних пристроїв
@@ -283,17 +452,20 @@ html {
   }
 }
 
-// Block Join 
+// Блок Join 
 
 .main-text-features {
-  margin-top: 100px;
+  margin-top: 151px;
   font-size: 56px;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
+  position: relative; // Забезпечує правильне позиціонування для дочірніх елементів
+  z-index: 1!important;
 }
 
+// Блок Features
 .features {
   background: $white-color;
   padding: 40px 20px;
@@ -305,42 +477,62 @@ html {
   text-align: center!important;
   gap: 40px;
   align-content: center!important;
+  position: relative; // Забезпечує правильне позиціонування для дочірніх елементів
+  z-index: 1!important;
+
 
   .main-text {
-      font-size: 1.8em;
-      margin-bottom: 41px;
+    font-size: 1.8em;
+    margin-bottom: 41px;
   }
 
-
   .feature-item {
+    background-color: $white-color!important;
+    padding: 40px 20px;
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; // Забезпечує правильне позиціонування для дочірніх елементів
+    z-index: 0!important;
+
+    .gradient-background {
+      position: absolute;
+      top: 20%; // Коригування для центрованого позиціонування
+      left: 190%; // Коригування для центрованого позиціонування
+      width: 400px; // Ширина блоку з градієнтом
+      height: 300px; // Висота блоку з градієнтом
+      transform: translate(-50%, -50%); // Центрування градієнта
+      background: linear-gradient(180deg, #3494E6 0%, #8583CD 44%, #EC6EAD 100%);
+      border-radius: 50%;
+      filter: blur(60px); // Розмиття для ефекту
+      z-index: 0!important; // Задній план
+  
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .icon {
       background-color: $white-color!important;
-      padding: 40px 20px;
-      border-radius: 40px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      font-size: 2em;
+    }
 
-      .icon {
-          background-color: $white-color!important;
-          font-size: 2em;
-      }
+    h3 {
+      background-color: $white-color!important;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
 
-      h3 {
-          background-color: $white-color!important;
-          font-size: 1.2em;
-          font-weight: bold;
-      }
-
-      p {
-          background-color: $white-color!important;
-          font-size: 0.9em;
-          color: $black-color;
-          font-size: 18px;
-      }
-
+    p {
+      background-color: $white-color!important;
+      font-size: 0.9em;
+      color: $black-color;
+      font-size: 18px;
+    }
   }
 
   .feature-item:nth-child(3) {
@@ -352,14 +544,15 @@ html {
   }
 
   @media (max-width: 768px) {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 
-      .feature-item:nth-child(3),
-      .feature-item:nth-child(4) {
-          grid-column: auto;
-      }
+    .feature-item:nth-child(3),
+    .feature-item:nth-child(4) {
+      grid-column: auto;
+    }
   }
 }
+
 
 // Блок Find
 
@@ -557,40 +750,44 @@ html {
 // Блок Write
 
 .write {
+  margin-top: 150px;
+  margin-bottom: -50px;
+
   .write-block {
     display: flex;
     align-items: center; // Центрування по вертикалі
     justify-content: space-between; // Простір між елементами
 
     @media (max-width: 992px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; // Центрування на менших екранах
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; // Центрування на менших екранах
     }
 
     .desc {
       display: flex;
       flex-direction: column; // Вирівнювання елементів вертикально
-      align-items: center; // Центрування елементів
+      align-items: flex-start; // Центрування елементів
 
       .main-text {
         font-size: 56px;
         font-weight: bold;
-        text-align: center; // Центрування тексту
+        text-align: left; // Центрування тексту
       }
 
       .desc-text { 
+        max-width: 700px;
         font-size: 21px; 
-        text-align: center; // Центрування тексту
+        text-align: left; // Центрування тексту
       }
 
       .btn-write {
         margin: 20px 0;
         background: linear-gradient(90deg, #574DCC, #579AFF);
-        padding: 15px 50px;
+        padding: 15px 100px;
         border: 0;
         border-radius: 8px;
-        color: $white-color;
+        color: #ffffff;
         font-size: 18px;
 
         @media (max-width: 992px) {
@@ -600,13 +797,31 @@ html {
     }
 
     .image {
+      z-index: 1!important;
       position: relative;
+      background-color: #add8e6; /* Колір фону */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // Задній фон для .image
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+      }
 
       img {
         display: block;
         max-width: 100%;
         height: auto;
         border-radius: 20px;
+        position: relative;
+        z-index: 1;
 
         @media (max-width: 992px) {
           max-width: 100%;
@@ -616,18 +831,20 @@ html {
   }
 }
 
+// Футер
 
 .footer {
   margin-top: 50px;
-  background-color: #fff; // Задаємо фон для футера
-  padding: 20px 0;
+  background-color: #fff!important; // Задаємо фон для футера
+  padding: 40px 0;
 
   .footer-container {
     display: flex;
     justify-content: space-between; // Вирівнюємо елементи по боках
     max-width: 1200px; // Максимальна ширина для контейнера
     margin: 0 auto; // Центруємо контейнер
-    padding: 0 20px; // Внутрішні відступи для контейнера
+    padding: 0; // Внутрішні відступи для контейнера
+    background-color: #fff!important; // Задаємо фон для футера
 
     @media (max-width: 992px) {
       margin: 0 50px;
@@ -640,14 +857,17 @@ html {
   .footer-column {
     display: flex;
     flex-direction: column; // Вирівнюємо елементи вертикально
-    margin: 10px 20px; // Відступи між колонками
+    margin: 0 20px; // Відступи між колонками
+    background-color: #fff!important; // Задаємо фон для футера
 
     h6 {
       font-weight: bold;
       margin-bottom: 10px; // Відступи знизу для заголовків
+      background-color: #fff!important; // Задаємо фон для футера
     }
 
     p, a {
+      background-color: #fff!important; // Задаємо фон для футера
       margin: 5px 0; // Відступи між абзацами та посиланнями
       color: #000; // Колір тексту та посилань
       text-decoration: none; // Відсутність підкреслення у посиланнях
