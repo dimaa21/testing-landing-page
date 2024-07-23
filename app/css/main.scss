@@ -15,6 +15,16 @@ $black-color: #303030;
     background-color: #F6F7FA!important;     
 }
 
+body {
+  .slider {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white-color;  
+  }
+}
+
 // FlexBox для наслідуванні
 
 .flex { 
@@ -74,7 +84,6 @@ html {
   position: relative; // Забезпечує правильне позиціонування
 
   @media (max-width: 992px) {
-      margin: 0 50px;
       flex-direction: column; // Вирівнюємо елементи вертикально на маленьких екранах
       align-items: center; // Вирівнюємо елементи по початку
       text-align: center; // Вирівнюємо текст по лівому краю
@@ -171,9 +180,10 @@ html {
         display: none;
       }
     }
-  }
+}
 
-  .new-form {
+// Форма під мобільні пристої
+.new-form {
     @media (min-width: 992px) {
       display: none;
     }
@@ -185,9 +195,13 @@ html {
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 400px;
+      max-width: 400px;
       text-align: center;
       margin: 0 9px 0 0;
+
+      @media (max-width: 992px) {
+        margin: 0 30px;
+      }
   
       .form-group {
         margin-bottom: 15px;
@@ -288,53 +302,31 @@ html {
         background-color: #4338ca;
       }
     }
-  }
+}
 
 // Slider 1
 
-.wrapper-2 {
-  margin-top: 75px;
+.slider {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white-color;
 
-  .block {
-    display: flex;
+  .slider-wrap {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    .slider-container {
 
-    .block__side {
-      flex: 0;
-    }
+      .card-wrapper {
+        .card {
+          .image-box {
+            height: 200px;
 
-    .block__body {
-      padding: 0px;
-      min-width: 0;
-
-      .image-slider-2 {
-        width: 100%;
-        height: 600px;
-        overflow: hidden;
-
-        .image-slider__wrapper {
-          display: flex;
-          width: 100%;
-          height: 100%;
-
-          .image-slider__slide {
-            
-            .image-slider__image {
-              img {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-              }
-            }
-
-            .one,
-            .last {
-              width: 97%;
-            }
-
-            .two {
-              margin: 0;
-              padding: 0;
+            img {
+              height: 100%;
             }
           }
         }
@@ -342,7 +334,6 @@ html {
     }
   }
 }
-
 
 // Блок About
 
@@ -750,7 +741,7 @@ html {
 // Блок Write
 
 .write {
-  margin-top: 150px;
+  margin-top: 75px;
   margin-bottom: -50px;
 
   .write-block {
