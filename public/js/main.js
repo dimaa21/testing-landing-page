@@ -102,3 +102,29 @@ new Swiper('.image-slider-2', {
       document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });
     });
   }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const imageList = document.querySelector('.image-list');
+    const images = Array.from(imageList.children);
+
+    // Клонуємо всі зображення і додаємо їх у кінець списку
+    images.forEach(image => {
+        const clone = image.cloneNode(true);
+        imageList.appendChild(clone);
+    });
+
+    let scrollAmount = 0;
+    const scrollSpeed = 1; // Швидкість прокручування
+
+    function autoScroll() {
+        scrollAmount += scrollSpeed;
+        if (scrollAmount >= imageList.scrollWidth / 2) {
+            scrollAmount = 0; // Повертаємо до початку
+        }
+        imageList.style.transform = `translateX(${-scrollAmount}px)`;
+        requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();
+});
+
