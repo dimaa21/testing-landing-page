@@ -559,29 +559,29 @@ html {
 .write {
   .write-block {
     display: flex;
-    align-items: center; // Вирівнювання по центру вертикально
+    align-items: center; // Центрування по вертикалі
     justify-content: space-between; // Простір між елементами
 
     @media (max-width: 992px) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; // Вирівнювання по центру при зменшенні екрану
+        justify-content: center; // Центрування на менших екранах
     }
 
     .desc {
       display: flex;
       flex-direction: column; // Вирівнювання елементів вертикально
-      align-items: center; // Вирівнювання елементів по центру
+      align-items: center; // Центрування елементів
 
       .main-text {
         font-size: 56px;
         font-weight: bold;
-        text-align: center; // Вирівнювання тексту по центру
+        text-align: center; // Центрування тексту
       }
 
       .desc-text { 
         font-size: 21px; 
-        text-align: center; // Вирівнювання тексту по центру
+        text-align: center; // Центрування тексту
       }
 
       .btn-write {
@@ -602,25 +602,30 @@ html {
     .image {
       position: relative;
 
+      .gradient-background {
+        position: absolute;
+        top: 25%; /* Відносний відступ зверху, можна налаштувати */
+        left: 15%; /* Відносний відступ зліва, можна налаштувати */
+        width: 200px; /* Ширина блоку з градієнтом */
+        height: 200px; /* Висота блоку з градієнтом */
+        transform: translate(-50%, -50%); /* Центрування градієнта */
+        background: linear-gradient(180deg, #3494E6 0%, #8583CD 44%, #EC6EAD 100%);
+        border-radius: 50%;
+        filter: blur(60px); /* Розмиття для ефекту */
+        z-index: 1; /* Задній план */
+      }
+
       img {
         position: relative;
-        z-index: 1; // Щоб зображення було поверх градієнту
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        z-index: 1;
 
         @media (max-width: 992px) {
           max-width: 100%;
         }
-      }
-
-      .gradient-background {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 50%;
-        height: 50%;
-        background: linear-gradient(90deg, #3494E6, #8583CD 44%, #EC6EAD);
-        filter: blur(50px);
-        z-index: 1;
       }
     }
   }
