@@ -57,60 +57,48 @@ breakpoints: {
 });
 
 new Swiper('.image-slider-2', {
-    simulateTouch: true,
-  
-    touchRatio: 1,
-  
-    touchAngle: 45, 
-  
-    grabCursor: true,
-  
-    keyboard: {
+  simulateTouch: true,
+  touchRatio: 1,
+  touchAngle: 45,
+  grabCursor: true,
+  keyboard: {
       enabled: true,
       onlyInViewport: true,
       pageUpDown: true,
-    },
-  
-    mousewheel: {
+  },
+  mousewheel: {
       sensitivity: 1,
       eventsTarget: '.image-slider-2',
-    },
-  
-    autoHeight: true,
-  
-    slidesPerView: 4.5,
-  
-    spaceBetween: 5,
-  
-    loop: true,
-  
-    loopedSlised: 3,
-  
-    freeMood: true,
-  
-    autoplay: {
-      delay: 1000, 
-  
-      stopOnLastSlide: true, 
-  
+  },
+
+  autoHeight: true,
+  slidesPerView: 3.5,
+  loop: true,
+  loopedSlides: 3,
+  freeMode: true,
+  autoplay: {
+      delay: 1000,
+      stopOnLastSlide: true,
       disableOnInteraction: false,
-      
       speed: 800
-      },
-      
+  },
+  spaceBetween: 20, // Додає відстань між слайдами
   breakpoints: {
       320: {
           slidesPerView: 1,
+          spaceBetween: 10, // Відстань для цього брейкпоінту
       },
       480: {
-        slidesPerView: 2,
+          slidesPerView: 2,
+          spaceBetween: 20, // Відстань для цього брейкпоінту
       },
       992: {
           slidesPerView: 3,
+          spaceBetween: 10, // Відстань для цього брейкпоінту
       }
-  },
-    
-  });
+  }
+});
+
 
 
   window.onload = function() {
