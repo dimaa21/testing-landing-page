@@ -48,6 +48,13 @@ $black-color: #303030;
     @extend .flex;
     margin-top: 30px;
 
+    @media (max-width: 992px) {
+      margin: 0 50px;
+      flex-direction: column; // Вирівнюємо елементи вертикально на маленьких екранах
+      align-items: center; // Вирівнюємо елементи по початку
+      text-align: center // Вирівнюємо текст по лівому краю
+    }
+
     .info { 
         margin: 30px 70px;
 
@@ -72,6 +79,10 @@ $black-color: #303030;
         width: 500px;
         text-align: center;
         margin: 0 10px 0 0;
+
+        @media (max-width: 992px) {
+            width: 400px;
+        }
         
         .google-btn, .signup-btn {
             background-color: #4285f4!important;
@@ -175,6 +186,10 @@ $black-color: #303030;
   align-items: center;
   text-align: center;
   padding: 20px; // Додатковий відступ для мобільних пристроїв
+
+  @media (max-width: 992px) {
+    margin-top: -200px;
+  }
 
   .main-about {
     background-color: $white-color !important;
@@ -510,46 +525,99 @@ $black-color: #303030;
 // Блок Write
 
 .write {
-  margin-top: 100px;
-
   .write-block {
     display: flex;
     align-items: center; // Вирівнювання по центру вертикально
     justify-content: space-between; // Простір між елементами
 
+    @media (max-width: 992px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; // Вирівнювання по центру при зменшенні екрану
+    }
 
-    .desc { 
+    .desc {
+      display: flex;
+      flex-direction: column; // Вирівнювання елементів вертикально
+      align-items: center; // Вирівнювання елементів по центру
 
       .main-text {
         font-size: 56px;
         font-weight: bold;
+        text-align: center; // Вирівнювання тексту по центру
       }
 
-      .desc-text { // Виправлено з .second-text на .desc-text
-        font-size: 21px; // Додано одиниці вимірювання px
+      .desc-text { 
+        font-size: 21px; 
+        text-align: center; // Вирівнювання тексту по центру
       }
 
       .btn-write {
         margin: 20px 0;
         background: linear-gradient(90deg, #574DCC, #579AFF);
-        padding: 15px 50px; // Зменшені відступи для мобільних пристроїв
+        padding: 15px 50px;
         border: 0;
-        border-radius: 8px; // Зменшене округлення для мобільних пристроїв
+        border-radius: 8px;
         color: $white-color;
-        font-size: 18px; // Зменшений розмір шрифту для мобільних пристроїв
+        font-size: 18px;
+
+        @media (max-width: 992px) {
+          align-self: center; // Центрування кнопки
+        }
       }
     }
 
     .image {
       img {
-        max-width: 100%; // Забезпечити адаптивність зображення
-        height: auto; // Зберігати пропорції зображення
+        @media (max-width: 992px) {
+          max-width: 100%;
+        }
       }
     }
   }
 }
 
 
+.footer {
+  background-color: #fff; // Задаємо фон для футера
+  padding: 20px 0;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between; // Вирівнюємо елементи по боках
+    max-width: 1200px; // Максимальна ширина для контейнера
+    margin: 0 auto; // Центруємо контейнер
+    padding: 0 20px; // Внутрішні відступи для контейнера
+
+    @media (max-width: 992px) {
+      margin: 0 50px;
+      flex-direction: column; // Вирівнюємо елементи вертикально на маленьких екранах
+      align-items: flex-start; // Вирівнюємо елементи по початку
+      text-align: left; // Вирівнюємо текст по лівому краю
+    }
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column; // Вирівнюємо елементи вертикально
+    margin: 10px 20px; // Відступи між колонками
+
+    h6 {
+      font-weight: bold;
+      margin-bottom: 10px; // Відступи знизу для заголовків
+    }
+
+    p, a {
+      margin: 5px 0; // Відступи між абзацами та посиланнями
+      color: #000; // Колір тексту та посилань
+      text-decoration: none; // Відсутність підкреслення у посиланнях
+    }
+
+    a:hover {
+      text-decoration: underline; // Підкреслення посилання при наведенні
+    }
+  }
+}
 
 
 
