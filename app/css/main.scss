@@ -602,26 +602,11 @@ html {
     .image {
       position: relative;
 
-      .gradient-background {
-        position: absolute;
-        top: 25%; /* Відносний відступ зверху, можна налаштувати */
-        left: 50%; /* Відносний відступ зліва, можна налаштувати */
-        width: 200px; /* Ширина блоку з градієнтом */
-        height: 200px; /* Висота блоку з градієнтом */
-        transform: translate(-50%, -50%); /* Центрування градієнта */
-        background: linear-gradient(180deg, #3494E6 0%, #8583CD 44%, #EC6EAD 100%);
-        border-radius: 50%;
-        filter: blur(60px); /* Розмиття для ефекту */
-        z-index: 0; /* Задній план */
-      }
-
       img {
-        position: relative;
         display: block;
         max-width: 100%;
         height: auto;
         border-radius: 20px;
-        z-index: 1;
 
         @media (max-width: 992px) {
           max-width: 100%;
