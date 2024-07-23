@@ -1,60 +1,44 @@
 new Swiper('.image-slider', {
-  simulateTouch: true,
-
-  touchRatio: 1,
-
-  touchAngle: 45, 
-
-  grabCursor: true,
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-    pageUpDown: true,
-  },
-
-  mousewheel: {
-    sensitivity: 1,
-    eventsTarget: '.image-slider',
-  },
-
-  autoHeight: true,
-
-  height: 300,
-
-  slidesPerView: 4.5,
-
-  spaceBetween: 10,
-
-  loop: true,
-
-  loopedSlised: 3,
-
-  freeMood: true,
-
-  autoplay: {
-    delay: 1000, 
-
-    stopOnLastSlide: true, 
-
-    disableOnInteraction: false,
-    
-    speed: 800
+    simulateTouch: true,
+    touchRatio: 1,
+    touchAngle: 45,
+    grabCursor: true,
+    touchEventsTarget: 'wrapper', // обмежуємо події всередині обгортки
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
     },
-    
-breakpoints: {
-    320: {
+    mousewheel: {
+      sensitivity: 1,
+      eventsTarget: '.image-slider',
+    },
+    autoHeight: true,
+    height: 300,
+    slidesPerView: 4.5,
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 3,
+    freeMode: false,
+    autoplay: {
+      delay: 1000, 
+      stopOnLastSlide: true, 
+      disableOnInteraction: false,
+      speed: 800
+    },
+    breakpoints: {
+      320: {
         slidesPerView: 1,
-    },
-    480: {
+      },
+      480: {
         slidesPerView: 2,
-    },
-    992: {
+      },
+      992: {
         slidesPerView: 3,
+      }
     }
-},
+  });
   
-});
 
 new Swiper('.image-slider-2', {
   simulateTouch: true,
