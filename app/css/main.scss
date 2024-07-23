@@ -45,6 +45,10 @@ html {
         border: $white-color;
         background-color: $white-color!important;
         border-radius: 10px;
+
+        @media (max-width: 992px) {
+          display: none;
+        }
     }
 }
 
@@ -179,8 +183,6 @@ html {
     }
   }
 }
-
-
 
 // Блок About
 
