@@ -25,6 +25,10 @@ $black-color: #303030;
     margin-bottom: 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header { 
     @extend .flex;
     margin-top: 31px; 
