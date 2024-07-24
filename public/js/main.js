@@ -103,28 +103,40 @@ new Swiper('.image-slider-2', {
     });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const imageList = document.querySelector('.image-list');
-    const images = Array.from(imageList.children);
+  let left = 0;
 
-    // Клонуємо всі зображення і додаємо їх у кінець списку
-    images.forEach(image => {
-        const clone = image.cloneNode(true);
-        imageList.appendChild(clone);
-    });
-
-    let scrollAmount = 0;
-    const scrollSpeed = 1; // Швидкість прокручування
-
-    function autoScroll() {
-        scrollAmount += scrollSpeed;
-        if (scrollAmount >= imageList.scrollWidth / 2) {
-            scrollAmount = 0; // Повертаємо до початку
-        }
-        imageList.style.transform = `translateX(${-scrollAmount}px)`;
-        requestAnimationFrame(autoScroll);
-    }
-
-    autoScroll();
-});
-
+  const slideBlock = document.querySelector('.slider-block');
+  
+  new Swiper('.swiper',{
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+       prevEl: '.swiper .swiper-button-prev',
+       nextEl: '.swiper .swiper-button-next'
+    },
+    pagination: {
+       el: '.swiper .swiper-pagination',
+       clickable: true
+    },
+    autoplay: {
+       delay: '2000'
+    },
+    breakpoints: {
+       640: {
+         slidesPerView: 1,
+         spaceBetween: 10,
+       },
+       768: {
+         slidesPerView: 2,
+         spaceBetween: 20,
+       },
+       1024: {
+         slidesPerView: 3,
+         spaceBetween: 30,
+       },
+       1924: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+     },
+})
